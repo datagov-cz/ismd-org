@@ -48,10 +48,19 @@ body:
       description: Vyberte úroveň závažnosti chyby.
       options:
         - Kritická (aplikace se nedá použít)
-        - Vysoká (zásadní funkce nefunguje)
-        - Střední (částečné omezení funkcí)
-        - Nízká (kosmetická chyba nebo překlep)
+        - Závažná (zásadní funkce nefunguje)
+        - Méně závažná (částečné omezení funkcí)
+        - Malá (kosmetická chyba nebo překlep)
       default: 1
+    validations:
+      required: true
+
+  - type: textarea
+    id: error_message
+    attributes:
+      label: Jakou chybu aplikace vrátila?
+      description: Napište prosím text a kód chyby, kterou aplikace vrátila.
+      placeholder: Nečekaná chyba
     validations:
       required: true
 

@@ -39,7 +39,7 @@ body:
   - type: input
     id: inspiration
     attributes:
-      label: Inspirace nebo odkazy (volitelně)
+      label: Inspirace nebo odkazy (volitelné)
       placeholder: Např. odkazy na podobná řešení nebo obrázky
 
   - type: dropdown
