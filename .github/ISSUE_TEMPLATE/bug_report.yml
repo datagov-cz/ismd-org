@@ -4,7 +4,6 @@ title: "[CHYBA]: "
 labels: ["bug"]
 assignees:
   - ''
-  -
 body:
   - type: dropdown
     id: operating_system
