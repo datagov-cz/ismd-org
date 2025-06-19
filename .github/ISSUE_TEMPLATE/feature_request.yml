@@ -30,12 +30,6 @@ body:
     validations:
       required: true
 
-  - type: textarea
-    id: benefits
-    attributes:
-      label: Jaké přínosy by toto vylepšení mělo?
-      description: Jak by to pomohlo uživatelům, týmu nebo systému?
-
   - type: input
     id: inspiration
     attributes:
