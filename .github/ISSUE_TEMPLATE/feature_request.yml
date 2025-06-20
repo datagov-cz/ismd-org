@@ -1,0 +1,56 @@
+name: Návrh na vylepšení
+description: Použijte tento formulář pro navržení nové funkce nebo vylepšení.
+title: "[NÁVRH]: "
+labels: ["enhancement"]
+assignees:
+  - ''
+
+body:
+  - type: input
+    id: feature_title
+    attributes:
+      label: Název návrhu
+      placeholder: Stručný popis vylepšení
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Proč je toto vylepšení potřeba?
+      description: Popište, v jaké situaci vám něco chybělo nebo co vám vadilo.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Popis navrhovaného řešení
+      description: Jak by mělo vylepšení podle vás fungovat? Co by se mělo změnit?
+    validations:
+      required: true
+
+  - type: input
+    id: inspiration
+    attributes:
+      label: Inspirace nebo odkazy (volitelné)
+      placeholder: Např. odkazy na podobná řešení nebo obrázky
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Jaká je priorita tohoto návrhu?
+      description: Určete důležitost navrhovaného vylepšení.
+      options:
+        - Nízká (pěkné mít, ale není nutné)
+        - Střední (užitečné, ale ne kritické)
+        - Vysoká (mělo by se implementovat co nejdříve)
+      default: 1
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Potvrzení
+      options:
+        - label: Zkontroloval(a) jsem, že toto vylepšení ještě nebylo navrženo.
+          required: true

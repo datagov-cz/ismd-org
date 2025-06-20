@@ -1,0 +1,107 @@
+name: Nahlášení chyby
+description: Použijte tento formulář k nahlášení chyby.
+title: "[CHYBA]: "
+labels: ["bug"]
+assignees:
+  - ''
+body:
+  - type: dropdown
+    id: operating_system
+    attributes:
+      label: Jaký operační systém používate?
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Jiný
+      default: 0
+    validations:
+      required: true
+
+  - type: input
+    id: system_info
+    attributes:
+      label: Jaká je verze operačního systému?
+      placeholder: Např. Windows 11, macOS Sequoia 15.5, verze 6.15.2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: V jakém prohlížeči se chyba vyskytla?
+      options:
+        - Google Chrome
+        - Mozilla Firefox
+        - Microsoft Edge
+        - Safari
+        - Opera
+        - Jiný
+      default: 0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: bug_severity
+    attributes:
+      label: Jak závažná je chyba?
+      description: Vyberte úroveň závažnosti chyby.
+      options:
+        - Kritická (aplikace se nedá použít)
+        - Závažná (zásadní funkce nefunguje)
+        - Méně závažná (částečné omezení funkcí)
+        - Malá (kosmetická chyba nebo překlep)
+      default: 1
+    validations:
+      required: true
+
+  - type: textarea
+    id: error_message
+    attributes:
+      label: Jakou chybu aplikace vrátila?
+      description: Napište prosím text a kód chyby, kterou aplikace vrátila.
+      placeholder: Nečekaná chyba
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: Kroky k reprodukci chyby
+      description: Popište jednotlivé kroky, jak chybu zopakovat.
+      placeholder: |
+        1. Otevřu stránku...
+        2. Kliknu na...
+        3. Objeví se chyba...
+    validations:
+        required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Očekávané chování
+      description: Co jste očekával(a), že se stane?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: Skutečné chování
+      description: Co se ve skutečnosti stalo?
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: Další informace (screenshot, video, poznámky)
+      description: Volitelně můžete přiložit obrázek nebo poznámky.
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Potvrzení
+      options:
+        - label: Ověřil(a) jsem, že chyba nebyla již nahlášena.
+          required: true
