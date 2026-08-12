@@ -1,5 +1,5 @@
 # Informační systém modelování dat
-repo pro organizaci projektu ISMD - obsahuje issues pro ostatní repozitáře
+Repositář pro organizaci projektu ISMD - obsahuje úvodní stránku pro ISMD a issues pro ostatní repozitáře:
 * [Dokumentace](https://github.com/datagov-cz/ismd-docs)
 * [DevOps](https://github.com/datagov-cz/ismd-infrastructure)
 * [Validátor, back-end](https://github.com/datagov-cz/ismd-validator-backend)
