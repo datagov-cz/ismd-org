@@ -37,11 +37,20 @@
   --spacing-footer-eu-width: 7.8125rem;
   --spacing-footer-recovery-size: 6.25rem;
   --spacing-footer-recovery-offset: 2.0625rem;
+  --spacing-feedback-menu: 13rem;
 
   --radius-hero: 2rem;
   --shadow-hero: 0 0.125rem 0.25rem rgb(0 0 0 / 30%);
   --tracking-heading: 0.046875rem;
   --tracking-body-large: 0.0140625rem;
+}
+
+@layer base {
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
 }
 
 @utility grid-cols-home {
@@ -74,5 +83,18 @@
 
   &::-webkit-scrollbar {
     display: none;
+  }
+}
+
+@utility feedback-menu {
+  & .gov-dropdown__list {
+    right: 0;
+    left: auto;
+    max-width: calc(100vw - 2rem);
+    margin-top: var(--spacing-s);
+  }
+
+  & .gov-dropdown__list ul {
+    width: min(var(--spacing-feedback-menu), calc(100vw - 2rem));
   }
 }
