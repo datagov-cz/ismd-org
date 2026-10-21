@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Roboto", Arial, sans-serif;
+
+  --color-brand: #2362a2;
+  --color-brand-dark: #1e5086;
+  --color-brand-navy: #1d3c5d;
+  --color-brand-bright: #337fc4;
+  --color-brand-subtle: #e5eef9;
+  --color-canvas: #f3f7fc;
+  --color-ink: #262626;
+  --color-muted: #4f4f4f;
+  --color-border-default: #d8d8d8;
+  --color-border-subtle: #e7e7e7;
+  --color-surface-subtle: #edf2f7;
+  --color-footer-link: #c5dbf2;
+
+  --spacing-layout-page: 66rem;
+  --spacing-layout-wide: 56.25rem;
+  --spacing-layout-content: 43.75rem;
+  --spacing-layout-guide: 43.5rem;
+  --spacing-layout-news-card: 18.75rem;
+  --spacing-scroll-section: 7.8125rem;
+  --spacing-scroll-section-desktop: 5.8125rem;
+  --spacing-process-marker: 2rem;
+  --spacing-hero-height: 10.9375rem;
+  --spacing-hero-art-height: 24.375rem;
+  --spacing-hero-art-width: 78rem;
+  --spacing-hero-padding-x: 2.0625rem;
+  --spacing-hero-padding-bottom: 1.875rem;
+  --spacing-footer-logo-height: 2.1875rem;
+  --spacing-footer-dia-width: 6.66525rem;
+  --spacing-footer-dia-height: 3.8976875rem;
+  --spacing-footer-dia-mark-left: 2.1965rem;
+  --spacing-footer-dia-mark-top: 0.295875rem;
+  --spacing-footer-eu-width: 7.8125rem;
+  --spacing-footer-recovery-size: 6.25rem;
+  --spacing-footer-recovery-offset: 2.0625rem;
+  --spacing-feedback-menu: 13rem;
+
+  --radius-hero: 2rem;
+  --shadow-hero: 0 0.125rem 0.25rem rgb(0 0 0 / 30%);
+  --tracking-heading: 0.046875rem;
+  --tracking-body-large: 0.0140625rem;
+}
+
+@layer base {
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+}
+
+@utility grid-cols-home {
+  grid-template-columns: 16.25rem minmax(0, 43.75rem);
+}
+
+@utility grid-cols-footer {
+  grid-template-columns: 15.5rem 14rem;
+}
+
+@utility grid-cols-process-step {
+  grid-template-columns: var(--spacing-process-marker) minmax(0, 1fr);
+}
+
+@utility grid-cols-news {
+  grid-template-columns: repeat(2, minmax(0, var(--spacing-layout-news-card)));
+}
+
+@utility border-active-bottom {
+  border-bottom-width: 0.1875rem;
+}
+
+@utility border-active-left {
+  border-left-width: 0.1875rem;
+}
+
+@utility scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility feedback-menu {
+  & .gov-dropdown__list {
+    right: 0;
+    left: auto;
+    max-width: calc(100vw - 2rem);
+    margin-top: var(--spacing-s);
+  }
+
+  & .gov-dropdown__list ul {
+    width: min(var(--spacing-feedback-menu), calc(100vw - 2rem));
+  }
+}
